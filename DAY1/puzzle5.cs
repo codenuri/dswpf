@@ -12,7 +12,26 @@ using System.Windows.Media.Imaging;
 class MainWindow : Window
 {
     private const int COUNT = 5;
+    private const int EMPTY = COUNT * COUNT - 1; // 마지막 블럭은 그리면 안된다
+
+    private int[,] state = new int[5, 5]; // 이번 단계의 핵심
+
+
     private Grid grid = new Grid();
+
+
+    public void InitGameState()
+    {
+        for (int y = 0; y < COUNT; y++)
+        {
+            for (int x = 0; x < COUNT; x++)
+            {
+                state[y, x] = 1; // 테스트를 위해 무조건 1번블럭
+            }
+        }
+    }
+
+
 
     public void InitGrid()
     {
