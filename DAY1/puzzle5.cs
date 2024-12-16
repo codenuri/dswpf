@@ -22,13 +22,16 @@ class MainWindow : Window
 
     public void InitGameState()
     {
+        // 아래 코드가 0 ~ 24까지 채우는 코드
         for (int y = 0; y < COUNT; y++)
         {
             for (int x = 0; x < COUNT; x++)
             {
-                state[y, x] = 1; // 테스트를 위해 무조건 1번블럭
+                state[y, x] = y * COUNT + x; 
             }
         }
+
+        state[0, 2] = 20; // 테스트용
     }
 
 
@@ -58,23 +61,31 @@ class MainWindow : Window
         {
             for (int x = 0; x < COUNT; x++)
             {
-
-                CroppedBitmap cb = new CroppedBitmap(bitmap,
-                                        new Int32Rect(x * width,
-                                                      y * height,
-                                                      width, height));
-
-                Image img = new Image();
-
-                img.Source = cb;
-                img.Stretch = Stretch.Fill;  
-                img.Margin = new Thickness(0.5);
+                if (state[y, x] != EMPTY)
+                {
+                    // state[y,x] 에 7 이 있다면
+                    // 7 => x= 2번째, y = 1 번째 라는 것을 구해야 한다.
+                    int bx = state[y, x] % COUNT;
+                    int by = state[y, x] / COUNT;
 
 
-                Grid.SetRow(img, y);
-                Grid.SetColumn(img, x);
+                    CroppedBitmap cb = new CroppedBitmap(bitmap,
+                                            new Int32Rect(bx * width,
+                                                          by * height,
+                                                          width, height));
 
-                grid.Children.Add(img);
+                    Image img = new Image();
+
+                    img.Source = cb;
+                    img.Stretch = Stretch.Fill;
+                    img.Margin = new Thickness(0.5);
+
+
+                    Grid.SetRow(img, y);
+                    Grid.SetColumn(img, x);
+
+                    grid.Children.Add(img);
+                }
 
             }
         }
