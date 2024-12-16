@@ -1,5 +1,4 @@
-﻿
-<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	Title="Hello, WPF" >
 
 	<StackPanel>
@@ -9,9 +8,9 @@
 		</Button>
 
 
-		<Button>button2<Button/>
+		<Button>button2</Button>
 		
-		<Button Content=button3><Button/>
+		<Button Content=button3></Button>
 
 		<Button Content=button4 />
 
