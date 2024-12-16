@@ -17,4 +17,4 @@ int v = col.FirstOrDefault(n => n % 2 == 0);
 int v2 = col.FirstOrDefault(n => n % 2 == 0 && n > 5);
 
 
-Console.WriteLine(v);
+Console.WriteLine(v2);
