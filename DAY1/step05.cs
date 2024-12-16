@@ -28,8 +28,8 @@ class Program
 
         Point pt = e.GetPosition(win); // win 를 기준으로 좌표얻기
 
-        win.Title = pt.X + " " + pt.Y;
+        win.Title = pt.X + ", " + pt.Y;
 
-        MessageBox.Show("Click");
+//        MessageBox.Show("Click");
     }
 }
