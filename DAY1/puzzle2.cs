@@ -7,6 +7,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 // #2. 그림 자르기!
+// => CroppedBitmap 알아 두세요
+// => 그림의 정보(너비, 높이)구하는 것도 알아 두세요
 
 class MainWindow : Window
 {
