@@ -11,4 +11,8 @@
 	<!-- 아래 처럼해도 자동으로 Windows 의 Content 에 놓이게 됩니다. -->
 	<Button></Button>
 
+	<Window.Title>
+		Hello, WPF
+	</Window.Title>
+
 </Window>
