@@ -7,50 +7,44 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-// #6. 블럭이동
+// #7. Layout 중첩
 
 class MainWindow : Window
 {
     private const int COUNT = 5;
-    private const int EMPTY = COUNT * COUNT - 1; 
+    private const int EMPTY = COUNT * COUNT - 1;
 
-    private int[,] state = new int[COUNT, COUNT]; 
+    private int[,] state = new int[COUNT, COUNT];
     private Grid grid = new Grid();
 
 
-    // 결국 사용자는 Image 에서 마우스를 클릭하게 되지만
-    // Window 도 이벤트를 처리할수 있습니다(Bubbling Event 개념- 내일)
+
     protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
     {
         base.OnMouseLeftButtonDown(e);
 
-        // #1. 클릭된 좌표 구하기
-        //      Point pt = e.GetPosition(this); // 이코드는 윈도우 기준 좌표
-        Point pt = e.GetPosition(grid); // ok. 게임판은 결국 grid 기준으로
+         Point pt = e.GetPosition(grid); 
 
-        // #2. x, y 축으로 몇번째 블럭인가
         int bx = (int)(pt.X / (grid.ActualWidth / COUNT));
         int by = (int)(pt.Y / (grid.ActualHeight / COUNT));
 
-        // 게임판 밖인 경우
+ 
         if (bx < 0 || by < 0 || bx >= COUNT || by >= COUNT) return;
 
 
-        // #3. 이동 가능한지 조사한다. - 핵심
-
-        if (bx > 0 && state[by, bx - 1] == EMPTY) // 왼쪽이 EMPTY 조사
+        if (bx > 0 && state[by, bx - 1] == EMPTY) 
         {
             SwapBlock(bx, by, bx - 1, by);
         }
-        else if (bx < COUNT - 1 && state[by, bx + 1] == EMPTY) // 오른쪽이 EMPTY 조사
+        else if (bx < COUNT - 1 && state[by, bx + 1] == EMPTY) 
         {
             SwapBlock(bx, by, bx + 1, by);
         }
-        else if (by > 0 && state[by - 1, bx] == EMPTY) // 위쪽 EMPTY 조사
+        else if (by > 0 && state[by - 1, bx] == EMPTY) 
         {
             SwapBlock(bx, by, bx, by - 1);
         }
-        else if (by < COUNT - 1 && state[by + 1, bx] == EMPTY) // 아래 EMPTY 조사
+        else if (by < COUNT - 1 && state[by + 1, bx] == EMPTY) 
         {
             SwapBlock(bx, by, bx, by + 1);
         }
@@ -59,11 +53,11 @@ class MainWindow : Window
             SystemSounds.Beep.Play();
             return;
         }
-        // 한개라도 움직혔으므려 다 맞추었는지 확인
+
     }
     public void SwapBlock(int x1, int y1, int x2, int y2)
     {
-        // 아래 코드는 약간 어렵습니다. - 별도로 설명..
+ 
         var collection = grid.Children.Cast<Image>(); // LINQ
 
         Image? img1 = collection.FirstOrDefault(
@@ -72,11 +66,8 @@ class MainWindow : Window
         Image? img2 = collection.FirstOrDefault(
                         img => Grid.GetRow(img) == y2 && Grid.GetColumn(img) == x2);
 
-        // img1 : grid 의 x1, y1 에 있는 Image
-        // img2 : grid 의 x2, y2 에 있는 Image
 
-        // 이제 img1, img2 의 위치를 변경합니다.
-        if ( img1 != null)
+        if (img1 != null)
         {
             Grid.SetRow(img1, y2);
             Grid.SetColumn(img1, x2);
@@ -87,8 +78,6 @@ class MainWindow : Window
             Grid.SetColumn(img2, x1);
         }
 
-        // Grid 위의 image 뿐 아니라
-        // 배열 자체도 변경해야 합니다.
         int tmp = state[y1, x1];
         state[y1, x1] = state[y2, x2];
         state[y2, x2] = tmp;
@@ -115,7 +104,15 @@ class MainWindow : Window
 
     public void InitGrid()
     {
-        this.Content = grid;
+//        this.Content = grid;
+
+        StackPanel sp = new StackPanel();
+
+        this.Content = sp;
+
+        sp.Children.Add( new Label { Content = "label"});
+        sp.Children.Add(grid);
+
 
         for (int i = 0; i < COUNT; i++)
         {
@@ -126,6 +123,9 @@ class MainWindow : Window
         this.Width = 800;
         this.Height = 600;
     }
+
+
+
 
     public void DrawGame()
     {
