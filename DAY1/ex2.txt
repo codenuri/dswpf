@@ -1,0 +1,14 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+
+	<!-- 아래 3줄 처럼 해도 되고
+	<Window.Content>
+
+		<Button></Button>
+	
+	</Window.Content>
+	-->
+
+	<!-- 아래 처럼해도 자동으로 Windows 의 Content 에 놓이게 됩니다. -->
+	<Button></Button>
+
+</Window>
