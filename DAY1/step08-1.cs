@@ -13,6 +13,13 @@ using System.Windows.Media;
 //              => App.OnExit() 호출. this.MainWindow 사용 못함
 // 4. App 객체 파괴
 
+// App 메소드에서 MainWindow 접근 : MainWindow 가 파괴되었을수 있다!
+//                                 항상 조심
+
+// MainWindow 메소드에서 App 접근 : 항상안전하다.
+//                                 App 는 프로그램 종료시 마지막으로
+//                                 파괴
+
 
 
 class MainWindow : Window
