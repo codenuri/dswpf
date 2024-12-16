@@ -30,9 +30,16 @@ class MainWindow : Window
         Button btn = new Button { Content = "확인" };
         this.Content = btn;
 
+
         // 버튼 누를때 메세지 박스 나타나게 해보세요
+        btn.Click += Btn_Click;
 
 
+    }
+
+    private void Btn_Click(object sender, RoutedEventArgs e)
+    {
+        MessageBox.Show("Button Click");
     }
 }
 
