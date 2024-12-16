@@ -7,6 +7,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 // #4. 25개 블럭 모두 그리기 
+// => 2중루프 로 25개의 image 객체 생성후 grid에 추가
+// => Image 의 Stretch, Margin 속성 사용
 
 class MainWindow : Window
 {
@@ -30,22 +32,37 @@ class MainWindow : Window
     public void DrawGame()
     {
         BitmapImage bitmap = new BitmapImage(new Uri("C:\\WPF\\totoro.jpg"));
-
         int width = (int)(bitmap.Width / COUNT);
         int height = (int)(bitmap.Height / COUNT);
 
-        CroppedBitmap cb = new CroppedBitmap(bitmap,
-                                new Int32Rect(0, 0, width, height));
 
-        Image img = new Image();
+        for( int y = 0; y < COUNT; y++ )
+        {
+            for (int x = 0; x < COUNT; x++)
+            {
 
-        img.Source = cb;
+                CroppedBitmap cb = new CroppedBitmap(bitmap,
+                                        new Int32Rect(x * width, 
+                                                      y * height, 
+                                                      width, height));
 
-        // img 를 Grid 의 0, 0 에 
-        Grid.SetRow(img, 0);
-        Grid.SetColumn(img, 0);
+                Image img = new Image();
 
-        grid.Children.Add(img);
+                img.Source = cb;
+                img.Stretch = Stretch.Fill;  // 가로세로 비율 유지 안함.
+                img.Margin = new Thickness(0.5); 
+
+
+                Grid.SetRow(img, y);
+                Grid.SetColumn(img, x);
+
+                grid.Children.Add(img);
+
+            }
+        }
+
+
+
     }
 
 
