@@ -37,6 +37,7 @@ class MainWindow : Window
         // Layout(Panel) 도 다양한 속성이 있습니다
         sp.Orientation = Orientation.Horizontal;
 
+        sp.HorizontalAlignment = HorizontalAlignment.Right;
 
         // StackPanel 외에도 7~8개의 Layout 이 있습니다.
         // (내일 모두 배우게 됩니다.)
