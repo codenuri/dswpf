@@ -3,6 +3,9 @@ using System.Windows;
 using System.Windows.Media;
 
 // Step05. Window event 처리
+// 방법 #1. window 의 delegate(event) 에 메소드 등록
+
+// 아래 코드의 특징 "windows 의 event" 를 Program 클래스에서 처리
 
 class Program
 {
