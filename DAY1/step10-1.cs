@@ -23,7 +23,18 @@ class MainWindow : Window
         // WPF : 잘 설계된 객체지향 라이브러리 입니다.
         //       Column, Row 라는 것도 모두 객체 입니다.
         RowDefinition rd1 = new RowDefinition();
+
+//      rd1.Height = 20; // error. 그냥 이렇게 숫자를 넣을수 없습니다
+// GridLength 라는 타입의 객체가 필요
+
+
+//      rd1.Height = new GridLength(200); // 200 pixel
+        
+        rd1.Height = new GridLength(20, GridUnitType.Star); // 20 %
+
         RowDefinition rd2 = new RowDefinition();
+        rd2.Height = new GridLength(80, GridUnitType.Star); // 80
+
 
         grid.RowDefinitions.Add(rd1);
         grid.RowDefinitions.Add(rd2);
