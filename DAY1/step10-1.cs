@@ -28,6 +28,7 @@ class MainWindow : Window
         grid.RowDefinitions.Add(rd1);
         grid.RowDefinitions.Add(rd2);
 
+
         ColumnDefinition cd1 = new ColumnDefinition();
         ColumnDefinition cd2 = new ColumnDefinition();
 
@@ -35,13 +36,30 @@ class MainWindow : Window
         grid.ColumnDefinitions.Add(cd2);
 
         //------------------------------------------
-
-
-
-
+        // #3. 필요한 자식 컨트롤을 만드세요
         Button btn1 = new Button { Content = "button1" };
+        Button btn2 = new Button { Content = "button2" };
+        Button btn3 = new Button { Content = "button3" };
+
+        Label lbl1 = new Label {  Content = "label1" };
+
+
+        // #4. 각 컨트롤이 Grid 에 어느 위치에 놓일지 설정해야 합니다.
+        // => 방법이 독특합니다. 잘 생각해보세요
+        // => Grid 클래스의 static 메소드 사용
+        // => 아래 코드가 복잡해 보일수 있지만 
+        //    내일 XML 로 만들면 간단해 집니다.
+        Grid.SetRow(btn1, 0); Grid.SetColumn(btn1, 0);
+        Grid.SetRow(btn2, 0); Grid.SetColumn(btn2, 1);
+        Grid.SetRow(btn3, 1); Grid.SetColumn(btn3, 0);
+        Grid.SetRow(lbl1, 1); Grid.SetColumn(lbl1, 1);
+
+        // #5. 각 자식을 grid 의 Collection 에 추가합니다.
 
         grid.Children.Add(btn1);
+        grid.Children.Add(btn2);
+        grid.Children.Add(btn3);
+        grid.Children.Add(lbl1);
     }
 }
 
