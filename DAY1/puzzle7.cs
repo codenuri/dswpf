@@ -17,11 +17,17 @@ class MainWindow : Window
     private int[,] state = new int[COUNT, COUNT];
     private Grid grid = new Grid();
 
-
+    private Label lb;
+    private int cnt = 0;
 
     protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
     {
         base.OnMouseLeftButtonDown(e);
+
+        ++cnt;
+
+        lb.Content = $"{cnt} 번 클릭함";
+
 
          Point pt = e.GetPosition(grid); 
 
@@ -54,7 +60,10 @@ class MainWindow : Window
             return;
         }
 
+        // 다 맞췄는지 확인
+        // => state 배열의 모든 요소가 순차적으로 되어 있는가 ?
     }
+
     public void SwapBlock(int x1, int y1, int x2, int y2)
     {
  
@@ -110,8 +119,14 @@ class MainWindow : Window
         //             마지막 자식이 나머지 영역 전체를 차지
 
         DockPanel dp = new DockPanel();
+        // 윈도우에 DockPanel 연결
+        this.Content = dp;
 
-        Label lb = new Label { Content = "label" };
+        lb = new Label { Content = "label" };
+
+        lb.FontSize = 30;
+        lb.HorizontalAlignment = HorizontalAlignment.Center;
+
 
         DockPanel.SetDock(lb, Dock.Top);
         DockPanel.SetDock(grid, Dock.Bottom);
@@ -120,8 +135,7 @@ class MainWindow : Window
         dp.Children.Add(grid);
                     // => 마지막 자식이 전체를 차지하게 됩니다.
 
-        // 윈도우에 DockPanel 연결
-        this.Content = dp;
+
 
         for (int i = 0; i < COUNT; i++)
         {
