@@ -4,14 +4,19 @@
 	<StackPanel>
 
 		<Button>
-			<Button.Content>button1</Button.Content>
+			<Button.Content>
+				button1
+			</Button.Content>
 		</Button>
 
 
 		<Button>button2</Button>
 		
 		<Button Content="button3"></Button>
+
 		<Button Content="button4" />
+
+		<Button Content="button4" FontSize="48" Background="#ff0000"/>
 
 	</StackPanel>
 
