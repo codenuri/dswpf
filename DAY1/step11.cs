@@ -12,6 +12,7 @@ class MainWindow : Window
 {
     public MainWindow()
     {
+        this.Title = "Hello, WPF";
     }
 }
 
@@ -32,7 +33,7 @@ class App : Application
 
 
         // 실행파일이 있는 위치를 기준으로 ../../.. 해야 소스가 있는 폴더 입니다.
-        FileStream fs = new FileStream("../../../ex1.txt", 
+        FileStream fs = new FileStream("../../../ex4.txt", 
                             FileMode.Open, FileAccess.Read);
 
         win = (Window)XamlReader.Load(fs);
