@@ -8,42 +8,51 @@ using System.Windows.Media;
 // step11 : UI 는 XML 로 만들고, 
 //          EVENT 는 C#으로 !!
 
-class MainWindow : Window
+namespace AAA
 {
-    public MainWindow()
+    public class MainWindow : Window
     {
-        this.Title = "Hello, WPF";
+        public MainWindow()
+        {
+            this.Title = "Hello, WPF";
+        }
+
+        private void Foo(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            MessageBox.Show("Click");
+        }
     }
-}
 
-class App : Application
-{
-    public App()
+    class App : Application
     {
+        public App()
+        {
 
-    }
+        }
 
-    [STAThread]
-    public static void Main()
-    {
-        App app = new App();
+        [STAThread]
+        public static void Main()
+        {
+            App app = new App();
 
-//        MainWindow win = null;
-        Window win = null;
-
-
-        // 실행파일이 있는 위치를 기준으로 ../../.. 해야 소스가 있는 폴더 입니다.
-        FileStream fs = new FileStream("../../../ex4.txt", 
-                            FileMode.Open, FileAccess.Read);
-
-        win = (Window)XamlReader.Load(fs);
-
-        fs.Close();
+            //        MainWindow win = null;
+            Window win = null;
 
 
-        win.Show();
+            // 실행파일이 있는 위치를 기준으로 ../../.. 해야 소스가 있는 폴더 입니다.
+            FileStream fs = new FileStream("../../../ex4.txt",
+                                FileMode.Open, FileAccess.Read);
 
-        app.Run();
+            win = (Window)XamlReader.Load(fs);
+
+            fs.Close();
+
+
+            win.Show();
+
+            app.Run();
+        }
+
     }
 
 }
