@@ -7,6 +7,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 // #3. Grid Layout 도입
+// => 5 * 5 로 설정
+// => 0, 0  위치에  왼쪽 상단 0번째 블럭 그림 출력
 
 class MainWindow : Window
 {
