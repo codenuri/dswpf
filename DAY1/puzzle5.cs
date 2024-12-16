@@ -14,7 +14,7 @@ class MainWindow : Window
     private const int COUNT = 5;
     private const int EMPTY = COUNT * COUNT - 1; // 마지막 블럭은 그리면 안된다
 
-    private int[,] state = new int[5, 5]; // 이번 단계의 핵심
+    private int[,] state = new int[COUNT, COUNT]; // 이번 단계의 핵심
 
 
     private Grid grid = new Grid();
@@ -31,7 +31,7 @@ class MainWindow : Window
             }
         }
 
-        state[0, 2] = 20; // 테스트용
+//      state[0, 2] = 20; // 테스트용
     }
 
 
