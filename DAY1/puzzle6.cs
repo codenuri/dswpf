@@ -63,7 +63,29 @@ class MainWindow : Window
     }
     public void SwapBlock(int x1, int y1, int x2, int y2)
     {
+        // 아래 코드는 약간 어렵습니다. - 별도로 설명..
+        var collection = grid.Children.Cast<Image>(); // LINQ
 
+        Image? img1 = collection.FirstOrDefault(
+                        img => Grid.GetRow(img) == y1 && Grid.GetColumn(img) == x1);
+
+        Image? img2 = collection.FirstOrDefault(
+                        img => Grid.GetRow(img) == y2 && Grid.GetColumn(img) == x2);
+
+        // img1 : grid 의 x1, y1 에 있는 Image
+        // img2 : grid 의 x2, y2 에 있는 Image
+
+        // 이제 img1, img2 의 위치를 변경합니다.
+        if ( img1 != null)
+        {
+            Grid.SetRow(img1, y2);
+            Grid.SetColumn(img1, x2);
+        }
+        if (img2 != null)
+        {
+            Grid.SetRow(img2, y1);
+            Grid.SetColumn(img2, x1);
+        }
     }
 
 
