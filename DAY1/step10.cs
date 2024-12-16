@@ -29,6 +29,10 @@ class MainWindow : Window
         // 어떻게 컨트롤을 배치할지를 sp 가 결정합니다.
         // => 윈도우 size 변경시 sp 가 알아서 자식컨트롤의 위치, 크기
         //    를 자동으로 결정.
+
+        // sp.Children : Collection 입니다.
+        //               그래서 Add() 로 자식 컨트롤들을 넣으면됩니다.
+
         sp.Children.Add(new Button { Content = "Button1" });
         sp.Children.Add(new Button { Content = "Button2" });
         sp.Children.Add(new Button { Content = "Button3" });
@@ -44,6 +48,10 @@ class MainWindow : Window
 
     }
 }
+
+// 쉬는 시간에 그림한개만 구해 놓으세요 (width, height 는 700~800정도)
+// sliding puzzle 게임 에 배경
+// jpg. png 등 모두 가능.. 
 
 
 
