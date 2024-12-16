@@ -32,6 +32,8 @@ class MainWindow : Window
 
     public MainWindow()
     {
+        InitGrid();
+
         BitmapImage bitmap = new BitmapImage(new Uri("C:\\WPF\\totoro.jpg"));
 
         int width = (int)(bitmap.Width / COUNT);
@@ -45,7 +47,9 @@ class MainWindow : Window
 
         img.Source = cb;
 
-        this.Content = img;
+        // img 를 Grid 의 0, 0 에 
+        Grid.SetRow(img, 0);
+        Grid.SetColumn(img, 0);
     }
 }
 
