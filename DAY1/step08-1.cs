@@ -28,6 +28,12 @@ class App : Application
         ((MainWindow)this.MainWindow).Foo(); 
     }
 
+    // OnExit 만들고 MainWindow 의 Foo 호출해 보세요
+
+
+
+
+
     public App()
     {
 
