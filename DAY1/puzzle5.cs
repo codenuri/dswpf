@@ -97,6 +97,8 @@ class MainWindow : Window
 
     public MainWindow()
     {
+        InitGameState();
+
         InitGrid();
 
         DrawGame();
