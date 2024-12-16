@@ -4,8 +4,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 
 // Step08-2
-// App 에서 MainWindow 접근 : this.MainWindow 또는
+// #1. App 에서 MainWindow 접근 : this.MainWindow 또는
 //                           ((MainWindow)this.MainWindow)
+
+// #2. MainWindow 에서 App 접근 : Application.Current
+//                              ((App)Application.Current)
 
 class MainWindow : Window
 {
@@ -24,7 +27,7 @@ class MainWindow : Window
 
         // Application.Current.Shutdown(); 
 
-        ?; // App 의 Foo 호출해 보세요 
+        ((App)Application.Current).Foo(); // App 의 Foo 호출해 보세요 
     }
 
 }
