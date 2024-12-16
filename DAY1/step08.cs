@@ -18,6 +18,7 @@ class MainWindow : Window
     }
 }
 
+
 class App : Application
 {
     protected override void OnStartup(StartupEventArgs e)
@@ -28,6 +29,12 @@ class App : Application
         // => 핵심 App 객체는 MainWindow 속성에 "주 윈도우"참조를 가지고있습니다.
 
         this.MainWindow.Title = "Hello";
+
+        //      this.MainWindow.Foo(); // error. this.MainWindow의 데이타 타입은
+                                        // Window 인데
+                                        // Foo 는  MainWindow 클래스에 있다.
+
+        ((MainWindow)this.MainWindow).Foo(); // OK..
     }
 
     public App()
