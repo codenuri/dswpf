@@ -28,12 +28,8 @@ class MainWindow : Window
         this.Height = 600;
     }
 
-
-
-    public MainWindow()
+    public void DrawGame()
     {
-        InitGrid();
-
         BitmapImage bitmap = new BitmapImage(new Uri("C:\\WPF\\totoro.jpg"));
 
         int width = (int)(bitmap.Width / COUNT);
@@ -42,7 +38,6 @@ class MainWindow : Window
         CroppedBitmap cb = new CroppedBitmap(bitmap,
                                 new Int32Rect(0, 0, width, height));
 
-
         Image img = new Image();
 
         img.Source = cb;
@@ -50,6 +45,16 @@ class MainWindow : Window
         // img 를 Grid 의 0, 0 에 
         Grid.SetRow(img, 0);
         Grid.SetColumn(img, 0);
+
+        grid.Children.Add(img);
+    }
+
+
+    public MainWindow()
+    {
+        InitGrid();
+
+        DrawGame();
     }
 }
 
