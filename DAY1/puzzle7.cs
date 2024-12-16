@@ -106,13 +106,22 @@ class MainWindow : Window
     {
 //        this.Content = grid;
 
-        StackPanel sp = new StackPanel();
+        // DockPanel : 위, 아래, 왼쪽, 오른쪽을 지정해서 자식 정렬
+        //             마지막 자식이 나머지 영역 전체를 차지
 
-        this.Content = sp;
+        DockPanel dp = new DockPanel();
 
-        sp.Children.Add( new Label { Content = "label"});
-        sp.Children.Add(grid);
+        Label lb = new Label { Content = "label" };
 
+        DockPanel.SetDock(lb, Dock.Top);
+        DockPanel.SetDock(grid, Dock.Bottom);
+                    
+        dp.Children.Add(lb);
+        dp.Children.Add(grid);
+                    // => 마지막 자식이 전체를 차지하게 됩니다.
+
+        // 윈도우에 DockPanel 연결
+        this.Content = dp;
 
         for (int i = 0; i < COUNT; i++)
         {
