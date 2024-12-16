@@ -10,6 +10,12 @@ class MainWindow : Window
     public MainWindow()
     {
     }
+
+    // App 의 OnStartup 에서 아래 메소드 호출해 보세요
+    public void Foo()
+    {
+        Console.WriteLine("MainWindow Foo");
+    }
 }
 
 class App : Application
@@ -37,6 +43,7 @@ class App : Application
         MainWindow win = new MainWindow();
         win.Show();
 
+//      app.MainWindow = win; // 예전에는 필수 
         app.Run();
     }
 
