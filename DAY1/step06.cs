@@ -25,6 +25,7 @@ class App : Application
     {
         // #2. delegate(event)를 등록하는 코드
         // Startup event : 프로그램 처럼 실행시 발생하는 이벤트
+        // Exit    event : 프로그램이 종료될때 발생
         this.Startup += App_Startup;
     }
 
