@@ -5,6 +5,15 @@ using System.Windows.Media;
 
 // Step08. App 와 Window 간의 서로 참조 얻기
 
+// #1. App 에서 Window 객체의 참조가 필요 하면
+// => this.MainWindow 사용하면 됩니다.
+// => 그런데, "this.MainWindow" 가 "Window class" 타입이므로
+// => MainWindow 클래스가 추가한 고유 멤버 접근시에는 아래 처럼 캐스팅해서 사용
+//    
+//   ((MainWindow)this.MainWindow).Foo();
+//   
+
+
 class MainWindow : Window
 {
     public MainWindow()
