@@ -20,13 +20,14 @@ class MainWindow : Window
         // #2. BitmapImage 객체 생성
         // => 순수하게 그림에 대한 데이타를 관리하는 클래스
         BitmapImage bitmap = new BitmapImage( uri );
+        
 
         // #3. Image : 그림을 화면에 출력하는 컨트롤(UI, 버튼, 윈도우 같은 클래스)
         Image img = new Image();
 
         img.Source = bitmap;
         
-
+        
         // #4. Content 속성으로 image 객체 연결
         this.Content = img;
     }
