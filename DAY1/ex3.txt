@@ -10,9 +10,8 @@
 
 		<Button>button2</Button>
 		
-		<Button Content=button3></Button>
-
-		<Button Content=button4 />
+		<Button Content="button3"></Button>
+		<Button Content="button4" />
 
 	</StackPanel>
 
