@@ -1,0 +1,26 @@
+﻿<Window x:Class="_06_RESOURCE.Ex4Resource4"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_06_RESOURCE"
+        mc:Ignorable="d"
+        Title="Ex4Resource4" Height="450" Width="800">
+    
+    <Window.Resources>
+        <SolidColorBrush x:Key="mybrush1"  Color="Red"/>
+    </Window.Resources>
+
+
+    <StackPanel>
+        <Button Content="button1" Background="{StaticResource mybrush1}"/>
+
+        <!-- mybrush2 는 App.Xaml 에 있습니다 -->
+        <Button Content="button2" Background="{StaticResource mybrush2}"/>
+
+        <!-- mybrush3 는 MyResource1.Xaml 에 있습니다 -->
+        <Button Content="button3" Background="{StaticResource mybrush3}"/>
+
+    </StackPanel>
+    
+</Window>

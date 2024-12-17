@@ -13,12 +13,27 @@
     <Compile Update="Ex2Resource2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Ex3Resource3.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ex4Resource4.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Ex1Resource1.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ex2Resource2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex3Resource3.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex4Resource4.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MyResource1.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
