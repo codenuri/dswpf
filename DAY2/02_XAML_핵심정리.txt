@@ -1,0 +1,22 @@
+핵심 정리
+
+1. 기존창 제거하고, 새로운 창 추가하기
+=> App.Xaml 의 StartupUri 변경
+
+Ex1Window : 윈도우 속성을 변경하는 방법
+Ex2Window : 이벤트 처리 방법
+Ex3Window : Name, x:Name 이야기
+            
+핵심 : InitializerComponent() 에서 이름(참조 변수)와 실제 XAML 로 만든 객체 연결
+
+
+
+
+
+
+
+
+
+
+
+

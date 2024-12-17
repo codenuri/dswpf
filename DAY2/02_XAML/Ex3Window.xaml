@@ -1,0 +1,23 @@
+﻿<Window x:Class="_02_XAML.Ex3Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_02_XAML"
+        mc:Ignorable="d"
+        Title="Ex3Window" Height="450" Width="800">
+    
+    <StackPanel>
+        
+        <!-- C# 에서 컨트롤를 직접 접근하려면 이름이 있으면 됩니다. -->
+        <!-- Name 과 x:Name 가능, x:Name 권장 -->
+        <!-- Name 은 UIElement 클래스로 부터 상속받는 Property 인데, 
+             UIElement 에서 상속되지 않은 클래스는 없습니다.
+             이때도 x:Name 은 가능합니다 -->
+        <Button Content="버튼1" Name="btn1"/>
+        <Button Content="버튼2" x:Name="btn2"/>
+
+    </StackPanel>
+    
+    
+</Window>

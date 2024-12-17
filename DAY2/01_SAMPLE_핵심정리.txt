@@ -1,0 +1,11 @@
+핵심정리
+1. WPF 어플리케이션 프로젝트로 생성
+2. WPF 프로그램은 2개의 객체 사용
+   => App 객체, MainWindow 객체 사용
+   => 2개 모두 XAML 로 생성하고, 속성도 지정. 
+   => App.Xaml, MainWindow.Xaml 
+   => UI 은 XAML, event 처리 C# 으로
+
+3. 자동생성 파일
+=> XAML 2개 파일, C# 소스 2개 파일 
+=> 그리고, 숨겨진 파일...

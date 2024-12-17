@@ -1,0 +1,27 @@
+﻿<Window x:Class="_02_XAML.Ex2Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_02_XAML"
+        mc:Ignorable="d"
+        Title="Ex2Window" Height="450" Width="800">
+    <StackPanel>
+        <Button Content="확인1"/>
+
+        
+        <!-- #1. 버튼을 만드는 다양한 방법들 -->
+        
+        <Button>확인2</Button>        
+        
+        <Button Content="확인3"></Button>
+        
+        <Button Content="확인3"/>
+
+        <!-- #2. event 처리 -->
+        <Button Click="Button_Click" Content="확인4" FontSize="20"
+                FontFamily="궁서체" Background="Blue" Margin="30,10,30,50"/>
+
+
+    </StackPanel>
+</Window>
