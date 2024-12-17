@@ -21,6 +21,9 @@
         <!-- mybrush3 는 MyResource1.Xaml 에 있습니다 -->
         <Button Content="button3" Background="{StaticResource mybrush3}"/>
 
+        <!-- mybrush4 는 MyResource2.Xaml 에 있습니다 -->
+        <Button Content="button4" Background="{StaticResource mybrush4}"/>
+        
     </StackPanel>
     
 </Window>

@@ -19,6 +19,7 @@
             
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="MyResource1.xaml"/>
+                <ResourceDictionary Source="MyResource2.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             
         </ResourceDictionary>

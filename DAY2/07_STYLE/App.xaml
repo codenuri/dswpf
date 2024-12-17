@@ -1,0 +1,9 @@
+﻿<Application x:Class="_07_STYLE.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:_07_STYLE"
+             StartupUri="Ex1Style1.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
