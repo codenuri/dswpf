@@ -12,3 +12,7 @@
 #Ex2Window
 => MarkupExtension 으로 부터 상속받는 클래스 만들기
 
+#Ex3Window
+=> 다른 창을 나타내는 방법
+
+
