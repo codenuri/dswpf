@@ -25,6 +25,12 @@
     <Compile Update="Ex6GridSplitter.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Ex7Example.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ex8WrapPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Ex1Canvas.xaml">
@@ -43,6 +49,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ex6GridSplitter.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex7Example.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex8WrapPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

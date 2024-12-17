@@ -9,7 +9,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
-            <RowDefinition />
+            <RowDefinition Height="auto"/>
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -27,9 +27,12 @@
         <!-- 핵심 : 아래 코드가 splitter 부착 -->
 
         <GridSplitter Grid.Row="0" Grid.Column="1" 
-                      HorizontalAlignment="Center"
-                      Width="5"
-                      Grid.RowSpan="3"/>
+                      HorizontalAlignment="Center" VerticalAlignment="Stretch"
+                      Width="5"  Grid.RowSpan="3"/>
+
+        <GridSplitter Grid.Row="1" Grid.Column="0" 
+                      VerticalAlignment="Center" HorizontalAlignment="Stretch"
+                      Height="5"  Grid.ColumnSpan="3"/>
 
     </Grid>
 </Window>
