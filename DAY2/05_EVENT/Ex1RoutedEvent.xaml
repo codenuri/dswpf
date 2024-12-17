@@ -1,0 +1,25 @@
+﻿<Window x:Class="_05_EVENT.Ex1RoutedEvent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_05_EVENT"
+        mc:Ignorable="d"
+        Title="Ex1RoutedEvent" Height="450" Width="800"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        PreviewMouseLeftButtonDown="Window_PreviewMouseLeftButtonDown"
+        >
+    
+    
+    
+    <Canvas Background="{x:Null}"  
+            MouseLeftButtonDown="Canvas_MouseLeftButtonDown"
+            PreviewMouseLeftButtonDown="Canvas_PreviewMouseLeftButtonDown">
+
+        <Ellipse Canvas.Left="50" Canvas.Top="50" Fill="Red"
+                 Width="200" Height="200"
+                 MouseLeftButtonDown="Ellipse_MouseLeftButtonDown"
+                 PreviewMouseLeftButtonDown="Ellipse_PreviewMouseLeftButtonDown"/>
+    </Canvas>
+    
+</Window>
