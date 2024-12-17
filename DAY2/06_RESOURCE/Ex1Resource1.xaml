@@ -1,0 +1,34 @@
+﻿<Window x:Class="_06_RESOURCE.Ex1Resource1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_06_RESOURCE"
+        mc:Ignorable="d"
+        Title="Ex1Resource1" Height="450" Width="800">
+    
+    
+    <!-- 핵심 #4. XAML 로 리소스 추가하기 -->
+    <!-- 복습할때 XAML 코드와 C# 코드를 꼭 비교해 보고 이해하세요. -->
+    <Window.Resources>
+        <SolidColorBrush x:Key="mybrush2"  Color="Red"/>
+
+    </Window.Resources>
+    
+    
+    <StackPanel>
+        
+        <!-- 핵심 5. 리소스를 사용해서 속성 지정하는 법 -->
+        <!-- {StaticResource mybrush1} 이 표기가 오전에 배운 MarkupExtension-->
+        <!-- 결국 StaticResource 는 클래스 이름, key 는 생성자 인자 -->
+        <Button Content="button1" Background="{StaticResource mybrush1}"/>
+        <Button Content="button2" Background="{StaticResource mybrush2}"/>
+
+        <!-- mytitle 은 String 타입의 객체입니다 "Hello" 나오게 해보세요 -->
+        <!-- 오전 03_XAML2 에서 String 객체 만드는 법 찾으세요 -->
+        <Button Content="{StaticResource mytitle}" />
+
+    </StackPanel>
+    
+    
+</Window>
