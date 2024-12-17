@@ -1,0 +1,31 @@
+﻿<Window x:Class="_03_XAML2.Ex1Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+
+        xmlns:local="clr-namespace:_03_XAML2"
+        
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        
+        mc:Ignorable="d"
+        Title="Ex1Window" Height="450" Width="800">
+
+    <ListBox x:Name="listbox">
+
+        <ListBox.Items>
+            
+            <Button Content="button"/>
+            <Label Content="label"/>
+            
+            <!-- String 은 Content 속성 없습니다. "hello" 는 생성자 인자로 전달-->
+            <System:String>hello</System:String> 
+            
+            <!-- 사용자가 만든 클래스의 객체 생성 -->
+            <local:MyPoint X="10" Y="20"/>
+
+        </ListBox.Items>
+        
+    </ListBox>
+    
+</Window>

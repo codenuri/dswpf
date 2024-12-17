@@ -1,0 +1,14 @@
+#Ex1Window
+핵심 : XAML 로는 어떠한 클래스의 객체도 생성가능
+=> UI 뿐 아니라 String 같은 타입도 객체 생성가능
+=> xmlns:System="clr-namespace:System;assembly=mscorlib"
+
+=> 사용자가 만든 클래스도 가능
+<local:MyPoint X="10" Y="20"/>
+
+#2. listbox 는
+=> 자신이 가진 객체의 ToString() 호출해서 보여주게됩니다.
+
+#Ex2Window
+=> MarkupExtension 으로 부터 상속받는 클래스 만들기
+
