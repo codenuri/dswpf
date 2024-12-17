@@ -7,30 +7,18 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Ex1Window.xaml.cs">
+    <Compile Update="Ex1Canvas.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Ex2Window.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Ex3Window.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Ex4Window.xaml.cs">
+    <Compile Update="Ex2Canvas2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Ex1Window.xaml">
+    <Page Update="Ex1Canvas.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Ex2Window.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Ex3Window.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Ex4Window.xaml">
+    <Page Update="Ex2Canvas2.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

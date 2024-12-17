@@ -1,0 +1,25 @@
+﻿<Window x:Class="_04_LAYOUT.Ex1Canvas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_04_LAYOUT"
+        mc:Ignorable="d"
+        Title="Ex1Canvas" Height="450" Width="800">
+    
+    <!-- Cavas Layout : 좌표로 자식 컨트롤을 배치 -->
+    <!-- 윈도우 size 조절시 자식 컨트롤이 재배치 되지 않습니다.-->
+    <Canvas>
+        <Button Content="button1" Canvas.Left="100" Canvas.Top="100"/>
+        <Button Content="button2" Canvas.Left="100" Canvas.Top="200"/>
+        <Button Content="button3" Canvas.Left="200" Canvas.Top="300" 
+                                  Width="200" Height="200"
+                                  Panel.ZIndex="2"/>
+
+        <Button Content="button4" Canvas.Left="300" Canvas.Top="400" 
+                                  Width="200" Height="200"
+                                  Panel.ZIndex="1"/>
+
+    </Canvas>
+    
+</Window>
