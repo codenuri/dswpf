@@ -1,0 +1,49 @@
+﻿<Window x:Class="_04_LAYOUT.Ex5Grid"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_04_LAYOUT"
+        mc:Ignorable="d"
+        Title="Ex5Grid" Height="450" Width="800">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <!-- 고정길이(pixel) 
+            <RowDefinition Height="100"/> 
+            <RowDefinition />
+            -->
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="80*"/>
+
+        </Grid.RowDefinitions>
+
+
+        <Button Grid.Row="0" Grid.Column="0" Content="button1"/>
+        <Button Grid.Row="0" Grid.Column="2" Content="button2"/>
+        <Button Grid.Row="1" Grid.Column="0" Content="button3"/>
+        <Button Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Content="button4"/>
+
+
+        <Button Grid.Row="0" Grid.Column="1" Width="50" Height="30" Content="button5"/>
+        <Button Grid.Row="0" Grid.Column="1" Height="30" 
+                            Margin="156,46,25,11" Content="button6" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-27.375"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+    </Grid>
+
+</Window>

@@ -13,12 +13,36 @@
     <Compile Update="Ex2Canvas2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Ex3DockPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ex4DockPanel2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ex5Grid.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ex6GridSplitter.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Ex1Canvas.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ex2Canvas2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex3DockPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex4DockPanel2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex5Grid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex6GridSplitter.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

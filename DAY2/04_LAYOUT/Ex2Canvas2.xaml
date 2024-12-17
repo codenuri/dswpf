@@ -21,7 +21,8 @@
                         MouseLeftButtonDown="canvas_MouseLeftButtonDown"> -->
 
     <Canvas Background="White"  x:Name="canvas" MouseMove="canvas_MouseMove"
-                        MouseLeftButtonDown="canvas_MouseLeftButtonDown">
+                        MouseLeftButtonDown="canvas_MouseLeftButtonDown"
+                        MouseRightButtonDown="canvas_MouseRightButtonDown">
 
     </Canvas>
     

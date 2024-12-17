@@ -1,0 +1,35 @@
+﻿<Window x:Class="_04_LAYOUT.Ex6GridSplitter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_04_LAYOUT"
+        mc:Ignorable="d"
+        Title="Ex6GridSplitter" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+
+        <Button Content="button1" Grid.Row ="0" Grid.Column="0"/>
+        <Button Content="button2" Grid.Row ="0" Grid.Column="2"/>
+        <Button Content="button3" Grid.Row ="2" Grid.Column="0"/>
+        <Button Content="button4" Grid.Row ="2" Grid.Column="2"/>
+        
+        <!-- 핵심 : 아래 코드가 splitter 부착 -->
+
+        <GridSplitter Grid.Row="0" Grid.Column="1" 
+                      HorizontalAlignment="Center"
+                      Width="5"
+                      Grid.RowSpan="3"/>
+
+    </Grid>
+</Window>

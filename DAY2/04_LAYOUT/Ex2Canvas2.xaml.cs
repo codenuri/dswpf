@@ -42,6 +42,8 @@ namespace _04_LAYOUT
                 Line line = new Line();
                 line.Stroke = new SolidColorBrush(Colors.Red);
 
+                line.StrokeThickness = 5;
+
                 line.X1 = from.X;
                 line.Y1 = from.Y;
                 line.X2 = to.X;
@@ -55,6 +57,9 @@ namespace _04_LAYOUT
             }
         }
 
-
+        private void canvas_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            canvas.Children.Clear();
+        }
     }
 }
