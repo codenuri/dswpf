@@ -40,3 +40,14 @@ namespace _05_EVENT
         }
     }
 }
+
+// 키보드를 누르면
+// PreviewKeydown
+// KEYDOWN - 인자가 대소문자 구별안함
+
+// 누른 키보드가 문자(ASCII)키보드라며 - TextInput 발생 => 인자가 대소문자 구별
+// = PreviewTextInput
+// = TextChanged   <= TextBox 가 변경되었으므로 발생
+
+// PreviewKeyup
+// KEYUP 

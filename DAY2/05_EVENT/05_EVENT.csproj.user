@@ -13,12 +13,18 @@
     <Compile Update="Ex2KeyEvent.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Ex3NumberText.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Ex1RoutedEvent.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ex2KeyEvent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex3NumberText.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
