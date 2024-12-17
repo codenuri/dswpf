@@ -4,6 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_06_RESOURCE"
+        
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        
         mc:Ignorable="d"
         Title="Ex1Resource1" Height="450" Width="800">
     
@@ -12,6 +15,8 @@
     <!-- 복습할때 XAML 코드와 C# 코드를 꼭 비교해 보고 이해하세요. -->
     <Window.Resources>
         <SolidColorBrush x:Key="mybrush2"  Color="Red"/>
+
+        <System:String x:Key="mytitle">Hello</System:String>
 
     </Window.Resources>
     

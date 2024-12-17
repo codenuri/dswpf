@@ -31,6 +31,9 @@ namespace _06_RESOURCE
             // 리소스(dictionary)에 보관한것
             this.Resources["mybrush1"] = new SolidColorBrush(Colors.Yellow);
 
+//          this.Resources["mytitle"] = "hello";
+                    // => C# 으로 등록하면 String 만들기가 아주 쉽습니다.
+
             // 핵심 #3. 아래 메소드 안에서 XAML 의 속성 초기화등이 수행됩니다.
             // 따라서, XAML 에서 사용할 리소스를 C# 코드로  만들려면
             // 반드시 이 메소드 호출전에 만들어야 합니다.

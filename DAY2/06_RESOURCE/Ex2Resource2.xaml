@@ -1,0 +1,27 @@
+﻿<Window x:Class="_06_RESOURCE.Ex2Resource2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_06_RESOURCE"
+        mc:Ignorable="d"
+        Title="Ex2Resource2" Height="450" Width="800">
+    
+    <Window.Resources>
+        <SolidColorBrush x:Key="mybrush"  Color="Red"/>
+    </Window.Resources>
+
+
+    <StackPanel>
+        <!-- 핵심 StaticResouce 와 DynamicResource 차이점 -->
+        <!-- static resoure  : dictionary 에 있는 값(브러시)의 복사본을 생성해서 사용-->
+        <!-- dynamic resoure : dictionary 에 있는 값(브러시)의 참조를 사용-->
+        <!--                   값 변경시 button 색상도 변경됨. -->
+        <Button Content="button1" Background="{StaticResource mybrush}"/>
+        <Button Content="button2" Background="{DynamicResource mybrush}"/>
+
+
+        <Button Content="button3" Click="Button_Click"/>
+
+    </StackPanel>
+</Window>
