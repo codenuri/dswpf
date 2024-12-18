@@ -1,0 +1,30 @@
+C#, WPF 를 학습/개발할때 실습 방법
+
+1. visual studio commnity 또는 professional
+2. dotnet tools 사용 - free 
+
+#1. 탐색기에서 원하는 이름으로 폴더하나 만드세요
+#2. 명령프롬프트 "cmd" 창 실행후, #1 에서 만든 폴더로 이동
+
+#3. 프로젝트 생성
+=> dotnet new console 하면 프로젝트파일과 기본코드 생성
+=> dotnet new wpf
+
+#4. 빌드
+dotnet build   => 프로젝트 설정대로 빌드면 
+dotnet run     => 빌드 + run
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
