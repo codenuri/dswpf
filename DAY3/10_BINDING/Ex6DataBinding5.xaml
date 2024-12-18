@@ -10,8 +10,12 @@
     <StackPanel>
         <ListBox x:Name="listbox" Height="300"/>
 
-        <Label Content="label"/>
-        
+        <Label 
+               FontSize="{Binding ElementName=slider, Path=Value, Mode=OneWay}"
+               Content="{Binding ElementName=txtbox, Path=Text, Mode=OneWay}"
+               FontFamily="{Binding ElementName=listbox, Path=SelectedItem, Mode=OneWay}"
+               />
+
         <TextBox x:Name="txtbox"/>
 
         <Slider x:Name="slider" Minimum="10" Maximum="100"/>
