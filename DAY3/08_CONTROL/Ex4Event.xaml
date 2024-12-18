@@ -10,10 +10,13 @@
     
     <StackPanel Orientation="Horizontal">
         
+        <!-- 핵심 #1. C# 에서 각 컨트롤에 접근하려면 이름이 필요합니다. -->
+        <!-- 핵심 #2. 각 컨트롤의 다양한 이벤트를 알아야 합니다. -->
+        <!-- 핵심 #3. 각 컨트롤의 다양한 메소드를 알아야 합니다. -->
         <TextBox x:Name="txtbox"    Width="100" Height="100"/>
-        <Button  Content="button1"  Width="100" Height="100"/>
+        <Button  Content="button1"  Width="100" Height="100" Click="Button_Click"/>
         
-        <ListBox  x:Name="listbox"  Width="100" Height="200"/>
+        <ListBox  SelectionChanged="listbox_SelectionChanged"  x:Name="listbox"  Width="100" Height="200"/>
         <Label    x:Name="label" Content="label1"   Width="100" Height="100"/>
 
 

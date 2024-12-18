@@ -1,0 +1,30 @@
+﻿<Window x:Class="_08_CONTROL.Ex5Tree"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_08_CONTROL"
+        mc:Ignorable="d"
+        Title="Ex5Tree" Height="450" Width="800">
+    <Grid>
+        
+        <!-- 핵심 #1. TreeView 사용법 -->
+        <TreeView>
+            <TreeViewItem Header="Shape"/>
+            
+            <TreeViewItem Header="Animal">
+                <TreeViewItem Header="Dog"/>
+                
+                <TreeViewItem Header="Cat">
+                    <TreeViewItem Header="Cat1"/>
+                    <TreeViewItem Header="Cat2"/>
+                </TreeViewItem>
+                
+                <TreeViewItem Header="Snake"/>
+            </TreeViewItem>
+
+
+        </TreeView>
+        
+    </Grid>
+</Window>

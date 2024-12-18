@@ -19,6 +19,12 @@
     <Compile Update="Ex4Event.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Ex5Tree.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ex6Tree2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Ex1Contents.xaml">
@@ -31,6 +37,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ex4Event.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex5Tree.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex6Tree2.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
