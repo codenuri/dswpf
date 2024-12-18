@@ -28,8 +28,10 @@
         
         <Slider x:Name="slider7" Minimum="10" Maximum="100" Value="30" Margin="30"/>
 
-        <Label Content="Label" Margin="30"/>
+        <Label x:Name="label"  Content="Label" Margin="30"
+               FontSize="{Binding ElementName=slider7,  Path=Value, Mode=TwoWay}"/>
 
+        <Button Content="button" Click="Button_Click"/>
 
     </StackPanel>
 </Window>

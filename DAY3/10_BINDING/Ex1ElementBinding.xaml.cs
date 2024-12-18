@@ -55,6 +55,9 @@ namespace _10_BINDING
             slider4.SetBinding(System.Windows.Controls.Slider.ValueProperty, b);
         }
 
- 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            label.FontSize = 50;
+        }
     }
 }
