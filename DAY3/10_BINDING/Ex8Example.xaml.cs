@@ -28,8 +28,7 @@ namespace _10_BINDING
         private byte blue = 0;
         private int thick = 30;
 
-        public Brush Brush { get; set; } = new SolidColorBrush(Colors.Red);
-
+        public Brush Brush { get; private set; } = new SolidColorBrush(Colors.Red);
 
         public void ChangeBrush()
         {
