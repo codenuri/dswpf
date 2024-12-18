@@ -10,12 +10,24 @@
     <Compile Update="Ex1VisualTree.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Ex2ControlTemplate.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ex3Example.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="VisualTree.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Ex1VisualTree.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex2ControlTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex3Example.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="VisualTree.xaml">
