@@ -13,6 +13,15 @@
     <Compile Update="Ex2DataBinding1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Ex4DataBinding3.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ex5DataBinding4.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ex6DataBinding5.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ExDataBinding2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -22,6 +31,15 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ex2DataBinding1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex4DataBinding3.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex5DataBinding4.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex6DataBinding5.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ExDataBinding2.xaml">
