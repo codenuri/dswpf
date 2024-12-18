@@ -54,8 +54,32 @@ class Person : INotifyPropertyChanged
     public string Name
     {
         get { return name; }
-        set { name = value; }
-    }
+        set { name = value;
 
+            if (PropertyChanged != null)
+            {
+                // 아래 코드는 그냥 등록된 함수를 호출하는 것입니다.
+                // => 인자는 객체(pe) 주소와 어떤 Property 가 변경되었는지
+                PropertyChanged(this, new PropertyChangedEventArgs("Name"));
+            }
+
+        }
+    }
+    public string Address
+    {
+        get { return address; }
+        set
+        {
+            address = value;
+
+            if (PropertyChanged != null)
+            {
+                // 아래 코드는 그냥 등록된 함수를 호출하는 것입니다.
+                // => 인자는 객체(pe) 주소와 어떤 Property 가 변경되었는지
+                PropertyChanged(this, new PropertyChangedEventArgs("Address"));
+            }
+
+        }
+    }
 
 }
