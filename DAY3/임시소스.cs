@@ -1,7 +1,7 @@
         public void ShowChild(DependencyObject obj, string sep)
         {
             // 먼저 자신의 타입 이름을 출력
-            Console.WriteLine($"{sep}{obj.GetType().Name}");
+            Console.WriteLine($"{sep}{obj.GetType().Name} ({obj.ToString()}) ");
 
             int cnt = VisualTreeHelper.GetChildrenCount(obj);
 
