@@ -9,7 +9,7 @@
 
     <StackPanel>
 
-        <ListBox x:Name="listbox" Height="300"/>
+        <ListBox x:Name="listbox" DisplayMemberPath="Name"  Height="300"  />
 
 
 

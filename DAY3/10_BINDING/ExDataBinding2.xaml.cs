@@ -20,7 +20,8 @@ namespace _10_BINDING
     /// </summary>
     public partial class ExDataBinding2 : Window
     {
-        // Person : 속성 변경시 통보하는 기능이 있씁니다.
+        // Person : 속성 변경시 통보하는 기능이 있습니다.
+        //          그래서 st가 아닌 st의 요소가 변경되면 통보 됩니다.
         // List   : 요소 추가시 통보하는 기능이 없습니다.
         //          즉, INotifyPropertyChanged 를 구현안함
         //private List<Person> st = new List<Person>();
@@ -50,6 +51,10 @@ namespace _10_BINDING
         {
             // #1. List(st) 에 있는 요소를 변경했습니다.
             // => ListBox 가 update 될까요 ?
+            // => 아래 코드는 컬렉션의 변경이 아닌
+            //    Person 객체의 변경입니다.
+            // => List 자체는 통보기능이 없지만
+            //    Person 클래스는 통보기능이 있습니다.
             st[0].Name = txtbox.Text; 
         }
 
@@ -59,3 +64,16 @@ namespace _10_BINDING
         }
     }
 }
+
+// Data Binding 정리
+
+// 1. 객체 한개의 다양한 속성을 UI 와 연결
+// => layout.DataContext = 객체;
+// => 반드시 클래스는 "INotifyPropertyChanged"
+//    인터페이스를 구현해야 한다.
+// => 객체가 자신의 속성이 변경되면 통보!
+// => DataBinding1 번예제
+//---------------------------------------------------------
+
+// 2. Collection 을 UI 와 연결
+// => listbox.ItemSources = Collection;
