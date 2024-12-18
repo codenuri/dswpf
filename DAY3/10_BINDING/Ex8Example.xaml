@@ -23,6 +23,8 @@
             <Slider Orientation="Vertical" Value="{Binding Path=Blue}" Minimum="0" Maximum="255"/>
             <Slider Orientation="Vertical" Value="{Binding Path=Thick}" Minimum="10" Maximum="100"/>
 
+            <Rectangle Width="100" Height="100" Fill="{Binding Path=Brush}" />
+            
         </StackPanel>
 
     </Grid>

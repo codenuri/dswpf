@@ -28,6 +28,23 @@ namespace _10_BINDING
         private byte blue = 0;
         private int thick = 30;
 
+        public Brush Brush { get; set; } = new SolidColorBrush(Colors.Red);
+
+
+        public void ChangeBrush()
+        {
+            this.Brush = new SolidColorBrush(
+                            Color.FromArgb(255, red, green, blue));
+
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this,
+                    new PropertyChangedEventArgs("Brush"));
+            }
+
+        }
+
+
         public byte Red
         {
             get { return red; }
@@ -38,6 +55,7 @@ namespace _10_BINDING
                     PropertyChanged(this,
                         new PropertyChangedEventArgs("Red"));
                 }
+                ChangeBrush();
             }
         }
         public byte Green
@@ -52,6 +70,7 @@ namespace _10_BINDING
                     PropertyChanged(this,
                         new PropertyChangedEventArgs("Green"));
                 }
+                ChangeBrush();
             }
         }
 
@@ -67,6 +86,7 @@ namespace _10_BINDING
                     PropertyChanged(this,
                         new PropertyChangedEventArgs("Blue"));
                 }
+                ChangeBrush();
             }
         }
         public int Thick
@@ -109,9 +129,7 @@ namespace _10_BINDING
 
             Rectangle r = new Rectangle();
 
-            r.Fill = new SolidColorBrush(Color.FromArgb(255, info.Red,
-                                                            info.Green, 
-                                                            info.Blue));
+            r.Fill = info.Brush;
             r.Width = info.Thick;
             r.Height = info.Thick;    
             r.StrokeThickness = info.Thick;
