@@ -1,14 +1,15 @@
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void ShowChild(DependencyObject obj, string sep)
         {
-            // visual tree 개념 : 현재 UI 의 자식 컨트롤을 나타내는 tree 구조
+            // 먼저 자신의 타입 이름을 출력
+            Console.WriteLine($"{sep}{obj.GetType().Name}");
 
-            int cnt = VisualTreeHelper.GetChildrenCount(this);
+            int cnt = VisualTreeHelper.GetChildrenCount(obj);
 
             for (int i = 0; i < cnt; i++)
             {
-                object obj = VisualTreeHelper.GetChild(this, i);
+                DependencyObject childobj = VisualTreeHelper.GetChild(obj, i);
 
-                Console.WriteLine(obj.GetType().Name );
+                ShowChild(childobj, sep + "   ");
             }
 
         }
