@@ -1,15 +1,12 @@
-        public void ShowChild(DependencyObject obj, string sep)
-        {
-            // 먼저 자신의 타입 이름을 출력
-            Console.WriteLine($"{sep}{obj.GetType().Name} ({obj.ToString()}) ");
+        <Button Content="button2">
 
-            int cnt = VisualTreeHelper.GetChildrenCount(obj);
+            <Button.Template>
 
-            for (int i = 0; i < cnt; i++)
-            {
-                DependencyObject childobj = VisualTreeHelper.GetChild(obj, i);
-
-                ShowChild(childobj, sep + "   ");
-            }
-
-        }
+                <ControlTemplate TargetType="Button">
+                    
+                    
+                </ControlTemplate>                
+                
+            </Button.Template>
+            
+        </Button>
