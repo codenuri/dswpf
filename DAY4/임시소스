@@ -1,0 +1,5 @@
+    <StackPanel>
+        <TextBox x:Name="txtbox" Width="300" Height="50" FontSize="20"/>
+        <CheckBox x:Name="checkbox" Content="동의" FontSize="20"/>
+        <Button x:Name="button" Content="로그인" FontSize="20"/>
+    </StackPanel>
