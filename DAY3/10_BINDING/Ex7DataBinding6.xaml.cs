@@ -82,15 +82,24 @@ namespace _10_BINDING
             TreeViewItem item = (TreeViewItem)treeview.SelectedItem;
             //TreeViewItem item = (TreeViewItem)sender;
 
-            if ( item.Tag is DriveInfo di )
+            try
             {
-                listview.ItemsSource = di.RootDirectory.GetDirectories();
+                if (item.Tag is DriveInfo di)
+                {
+
+                    listview.ItemsSource = di.RootDirectory.GetDirectories();
+                }
+                else if (item.Tag is DirectoryInfo root)
+                {
+                    listview.ItemsSource = root.GetDirectories();
+                }
             }
-            else if ( item.Tag is DirectoryInfo root )
+            catch (Exception ex)
             {
-                listview.ItemsSource = root.GetDirectories();
+                // Access to the path 'C:\Documents and Settings' is denied. 
+                // 입니다.
+                Console.WriteLine(ex.ToString());
             }
-            
         }
     }
 }
