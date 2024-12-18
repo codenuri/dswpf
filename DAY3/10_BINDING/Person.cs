@@ -82,4 +82,9 @@ class Person : INotifyPropertyChanged
         }
     }
 
+    public override string ToString()
+    {
+        return $"{Name}, {Address}";
+    }
+
 }
