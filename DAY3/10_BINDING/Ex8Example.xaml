@@ -16,8 +16,13 @@
         <Canvas x:Name="canvas" Background="Wheat" Grid.Row="0" Grid.Column="0"
                 MouseLeftButtonDown="canvas_MouseLeftButtonDown"/>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
-            
+        <StackPanel x:Name="stackpanel"  Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+
+            <Slider Orientation="Vertical" Value="{Binding Path=Red}"  Minimum="0" Maximum="255"/>
+            <Slider Orientation="Vertical" Value="{Binding Path=Green}" Minimum="0" Maximum="255"/>
+            <Slider Orientation="Vertical" Value="{Binding Path=Blue}" Minimum="0" Maximum="255"/>
+            <Slider Orientation="Vertical" Value="{Binding Path=Thick}" Minimum="10" Maximum="100"/>
+
         </StackPanel>
 
     </Grid>

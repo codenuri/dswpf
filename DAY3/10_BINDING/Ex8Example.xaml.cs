@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,19 +15,92 @@ using System.Windows.Shapes;
 
 namespace _10_BINDING
 {
+    // #1. Data Binding 하려면
+    // => Data 를 독립된 클래스로 설계하세요
+    // => 흔히 "Model" 이라고 부릅니다.
+
+    public class LineInfo : INotifyPropertyChanged
+    {
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        private byte red = 255;
+        private byte green = 0;
+        private byte blue = 0;
+        private int thick = 30;
+
+        public byte Red
+        {
+            get { return red; }
+            set { red = value;
+            
+                if ( PropertyChanged != null)
+                {
+                    PropertyChanged(this,
+                        new PropertyChangedEventArgs("Red"));
+                }
+            }
+        }
+        public byte Green
+        {
+            get { return green; }
+            set
+            {
+                green = value;
+
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this,
+                        new PropertyChangedEventArgs("Green"));
+                }
+            }
+        }
+
+        public byte Blue
+        {
+            get { return blue; }
+            set
+            {
+                blue = value;
+
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this,
+                        new PropertyChangedEventArgs("Blue"));
+                }
+            }
+        }
+        public int Thick
+        {
+            get { return thick; }
+            set
+            {
+                thick = value;
+
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this,
+                        new PropertyChangedEventArgs("Thick"));
+                }
+            }
+        }
+    }
+
+
+
+
+
     /// <summary>
     /// Ex8Example.xaml에 대한 상호 작용 논리
     /// </summary>
     public partial class Ex8Example : Window
     {
-        private byte red = 255;
-        private byte green = 0;
-        private byte blue = 0;
-        private int thick = 0;
+        private LineInfo info = new LineInfo();
 
         public Ex8Example()
         {
             InitializeComponent();
+
+            stackpanel.DataContext = info;
         }
 
         private void canvas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -35,17 +109,19 @@ namespace _10_BINDING
 
             Rectangle r = new Rectangle();
 
-            r.Fill = new SolidColorBrush(Color.FromArgb(255, red, green, blue));
-            r.Width = 30;
-            r.Height = 30;    
-            r.StrokeThickness = thick;
+            r.Fill = new SolidColorBrush(Color.FromArgb(255, info.Red,
+                                                            info.Green, 
+                                                            info.Blue));
+            r.Width = info.Thick;
+            r.Height = info.Thick;    
+            r.StrokeThickness = info.Thick;
 
             Canvas.SetLeft(r, pt.X);
             Canvas.SetTop(r, pt.Y);
 
             canvas.Children.Add(r);
 
-            Console.WriteLine("aa");
+          
 
         }
     }
