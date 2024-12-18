@@ -13,12 +13,18 @@
     <Compile Update="Ex2DataBinding1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ExDataBinding2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Ex1ElementBinding.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ex2DataBinding1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExDataBinding2.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

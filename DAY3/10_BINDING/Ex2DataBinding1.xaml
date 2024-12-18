@@ -15,7 +15,9 @@
         <TextBox Text="{Binding Path=Address}" Margin="20" FontSize="48"/>
 
         <Button Content="button" Click="Button_Click"/>
+        <TextBox Text="{Binding Path=Name}"   Margin="20" FontSize="48"/>
 
+        <Button Content="button" Click="Button_Click_1"/>
     </StackPanel>
     
     

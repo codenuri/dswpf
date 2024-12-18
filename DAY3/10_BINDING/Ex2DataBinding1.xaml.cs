@@ -43,5 +43,10 @@ namespace _10_BINDING
             pe.Name = "lee";
             pe.Address = "jeju";
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine($"{pe.Name}, {pe.Address}");
+        }
     }
 }
