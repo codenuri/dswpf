@@ -1,0 +1,35 @@
+﻿<Window x:Class="_10_BINDING.Ex1ElementBinding"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_10_BINDING"
+        mc:Ignorable="d"
+        Title="Ex1ElementBinding" Height="450" Width="800">
+    <StackPanel>
+
+        <Slider x:Name="slider1" Minimum="10" Maximum="100" Value="30" Margin="30" ValueChanged="slider1_ValueChanged"/>
+        <Slider x:Name="slider2" Minimum="10" Maximum="100" Value="30" Margin="30" ValueChanged="slider2_ValueChanged"/>
+        <Slider x:Name="slider3" Minimum="10" Maximum="100" Value="30" Margin="30"/>
+        <Slider x:Name="slider4" Minimum="10" Maximum="100" Value="30" Margin="30"/>
+        
+        
+        <Slider x:Name="slider5" Minimum="10" Maximum="100" Value="30" Margin="30"/>
+        
+        <!-- 아래 코드가 XAML 에서 Element Binding 하는 코드 -->
+        <!-- 2일차 03_XAML2 에서 MarkupExtension 예제를 꼭 이해해야 이런 코드를 -->
+        <!-- 정확히 사용할수 있습니다. -->
+        
+        <Slider x:Name="slider6" Minimum="10" Maximum="100" Margin="30"
+                
+                Value="{Binding ElementName=slider5,  Path=Value, Mode=TwoWay}"
+                
+                />
+        
+        <Slider x:Name="slider7" Minimum="10" Maximum="100" Value="30" Margin="30"/>
+
+        <Label Content="Label" Margin="30"/>
+
+
+    </StackPanel>
+</Window>
