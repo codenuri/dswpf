@@ -1,0 +1,59 @@
+﻿<Window x:Class="_07_STYLE.Ex2Style2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_07_STYLE"
+        mc:Ignorable="d"
+        Title="Ex2Style2" Height="450" Width="800">
+
+    
+    <Window.Resources>
+
+        <!-- #1. 속성(Property)만 변경한 Style -->
+        <Style x:Key="mystyle1">
+            <Setter Property="Control.FontSize" Value="48"/>
+            <Setter Property="Control.FontWeight" Value="Bold"/>
+        </Style>
+
+
+        <!-- #2. 속성(Property) 과 EventSetter 를 가진 Style -->
+        <Style x:Key="mystyle2">
+            <Setter Property="Control.FontSize" Value="48"/>
+
+            <EventSetter Event="FrameworkElement.MouseEnter" Handler="mouse_enter"/>            
+            <EventSetter Event="FrameworkElement.MouseLeave" Handler="mouse_leave"/>
+            
+        </Style>
+
+
+        <!-- #3. 속성(Property) 과 Trigger 를 가진 Style -->
+        <Style x:Key="mystyle3">
+            <Setter Property="Control.FontSize" Value="48"/>
+
+            <Style.Triggers>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="Control.Background" Value="Yellow"/>
+                </Trigger>
+                
+                <Trigger Property="Control.IsMouseOver" Value="False">
+                    <Setter Property="Control.Background" Value="{x:Null}"/>
+                </Trigger>
+                
+            </Style.Triggers>
+            
+
+        </Style>
+
+        
+    </Window.Resources>
+
+
+    <StackPanel>
+        <Label Content="label1" Style="{StaticResource mystyle1}"></Label>
+        <Label x:Name="label2" Content="label2" Style="{StaticResource mystyle2}"></Label>
+        <Label Content="label3" Style="{StaticResource mystyle3}"></Label>
+        
+    </StackPanel>
+    
+</Window>
