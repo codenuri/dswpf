@@ -1,0 +1,24 @@
+﻿<Window x:Class="_10_BINDING.Ex8Example"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_10_BINDING"
+        mc:Ignorable="d"
+        Title="Ex8Example" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="193*"/>
+            <ColumnDefinition Width="207*"/>
+        </Grid.ColumnDefinitions>
+
+        
+        <Canvas x:Name="canvas" Background="Wheat" Grid.Row="0" Grid.Column="0"
+                MouseLeftButtonDown="canvas_MouseLeftButtonDown"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+            
+        </StackPanel>
+
+    </Grid>
+</Window>

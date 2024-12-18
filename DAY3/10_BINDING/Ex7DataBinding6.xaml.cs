@@ -97,7 +97,7 @@ namespace _10_BINDING
             catch (Exception ex)
             {
                 // Access to the path 'C:\Documents and Settings' is denied. 
-                // 입니다.
+                // 입니다. 접근 안되는 폴더 문제.. 
                 Console.WriteLine(ex.ToString());
             }
         }

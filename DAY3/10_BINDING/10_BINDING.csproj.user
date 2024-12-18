@@ -25,6 +25,9 @@
     <Compile Update="Ex7DataBinding6.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Ex8Example.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ExDataBinding2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -46,6 +49,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ex7DataBinding6.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex8Example.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ExDataBinding2.xaml">

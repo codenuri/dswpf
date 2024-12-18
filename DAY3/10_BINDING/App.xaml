@@ -2,7 +2,7 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:_10_BINDING"
-             StartupUri="Ex7DataBinding6.xaml">
+             StartupUri="Ex8Example.xaml">
     <Application.Resources>
          
     </Application.Resources>
