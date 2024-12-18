@@ -1,0 +1,32 @@
+﻿<Window x:Class="_08_CONTROL.Ex2Control1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_08_CONTROL"
+        mc:Ignorable="d"
+        Title="Ex2Control1" Height="450" Width="800">
+    
+    <StackPanel>
+        <Button Content="button1"/>
+   
+        <!-- 핵심#1. Button : Contents 만 표현, GroupBox : Contents + Header -->
+        <GroupBox Header="header" Content="Content" Width="100" Height="100"/>
+
+        <GroupBox Header="선택하세요" Width="100" Height="150">
+            <StackPanel>
+                <RadioButton GroupName="color" Content="Red"/>
+                <RadioButton GroupName="color" Content="Green"/>
+                <RadioButton GroupName="color" Content="Blue" IsChecked="True"/>
+
+                <RadioButton GroupName="thick" Content="10"/>
+                <RadioButton GroupName="thick" Content="20"/>
+                <RadioButton GroupName="thick" Content="30" IsChecked="True" />
+            </StackPanel>
+            
+        </GroupBox>
+
+
+
+    </StackPanel>
+</Window>
