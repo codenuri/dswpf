@@ -10,12 +10,18 @@
     <Compile Update="Thread1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Thread2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Thread1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Thread2.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
