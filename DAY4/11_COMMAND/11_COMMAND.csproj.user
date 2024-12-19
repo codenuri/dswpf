@@ -16,6 +16,9 @@
     <Compile Update="Ex3Command3.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Ex4Command4.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Ex1Command1.xaml">
@@ -25,6 +28,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ex3Command3.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex4Command4.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
