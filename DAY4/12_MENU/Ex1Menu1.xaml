@@ -1,0 +1,35 @@
+﻿<Window x:Class="_12_MENU.Ex1Menu1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_12_MENU"
+        mc:Ignorable="d"
+        Title="Ex1Menu1" Height="450" Width="800">
+
+    <!-- 아래 처럼도 가능하지만 보통 StackPanel 등을 사용 
+    <Canvas>
+        <Menu Canvas.Left="100" Canvas.Top="100">
+    -->
+    <StackPanel>
+        <Menu>
+            <MenuItem Header="File">
+                <MenuItem Header="새파일"/>
+                <Separator/>
+                <MenuItem Header="종료" Click="MenuItem_Click"/>
+            </MenuItem>
+
+            <MenuItem Header="도움말">
+                <MenuItem Header="정보" Command="{StaticResource aboutcmd}" >
+                    <MenuItem.Icon>
+                        <Image Source="images/melon.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+            </MenuItem>            
+        </Menu>
+
+    </StackPanel>
+
+
+</Window>
