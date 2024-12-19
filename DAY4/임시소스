@@ -1,5 +1,19 @@
     <StackPanel>
-        <TextBox x:Name="txtbox" Width="300" Height="50" FontSize="20"/>
-        <CheckBox x:Name="checkbox" Content="동의" FontSize="20"/>
-        <Button x:Name="button" Content="로그인" FontSize="20"/>
+        <Menu>
+            <MenuItem Header="File">
+                <MenuItem Header="새파일"/>
+                <Separator/>
+                <MenuItem Header="종료"/>
+            </MenuItem>
+
+            <MenuItem Header="도움말">
+                <MenuItem Header="정보">
+                    <MenuItem.Icon>
+                        <Image Source="images/melon.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+            </MenuItem>            
+        </Menu>
+
     </StackPanel>
