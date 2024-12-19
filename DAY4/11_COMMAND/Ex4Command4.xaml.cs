@@ -16,7 +16,26 @@ namespace _11_COMMAND
 {
     public class LogInCommand3 : ICommand
     {
-        public event EventHandler? CanExecuteChanged;
+        public event EventHandler? CanExecuteChanged
+        {
+            // WPF 에서 CanExecuteChanged 에 함수를 등록할때
+            // 아래 부분이 호출됩니다
+            // value 에 있는값이 WPF의 함수 입니다.
+            add 
+            {
+                // 해당 함수를 CommandManager 라는 클래스에 등록하면
+                // 현재 윈도우에 UI 변화가 있으면 
+                // #1. 자동으로 value(WPF 함수) 호출
+                // #2. WPF 내부 함수가 CanExecute 호출
+                // #3. CanExecute 의 결과로 UI Update
+                CommandManager.RequerySuggested += value;
+            }
+            remove 
+            {
+                CommandManager.RequerySuggested -= value;
+            }
+        }
+
 
  
         public bool CanExecute(object? parameter)
@@ -28,17 +47,6 @@ namespace _11_COMMAND
             bool b1 = !string.IsNullOrEmpty(win.txtbox.Text);
 
             return b1 && win.checkbox.IsChecked == true;
-        }
-
-
-
-        public void FireCanExecute()
-        {
-   
-            if (CanExecuteChanged != null)
-            {
-                CanExecuteChanged(this, EventArgs.Empty);
-            }
         }
 
 
