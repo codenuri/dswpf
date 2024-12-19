@@ -7,6 +7,24 @@
         mc:Ignorable="d"
         Title="Ex1Menu1" Height="450" Width="800">
 
+
+    <Window.Resources>
+
+        <RoutedCommand x:Key="aboutcmd"/>
+
+    </Window.Resources>
+
+
+    <Window.CommandBindings>
+
+        <CommandBinding Command="{StaticResource aboutcmd}"
+                        Executed="CommandBinding_Executed"
+                        CanExecute="CommandBinding_CanExecute"/>
+
+    </Window.CommandBindings>
+    
+    
+    
     <!-- 아래 처럼도 가능하지만 보통 StackPanel 등을 사용 
     <Canvas>
         <Menu Canvas.Left="100" Canvas.Top="100">

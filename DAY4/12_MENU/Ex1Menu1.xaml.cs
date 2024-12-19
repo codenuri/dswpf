@@ -28,5 +28,15 @@ namespace _12_MENU
         {
             Application.Current.Shutdown();
         }
+
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            MessageBox.Show("프로젝트 제출자정보 적으세요");
+        }
+
+        private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
     }
 }
