@@ -23,9 +23,15 @@
 
         Console.WriteLine("main 은 계속 실행될수 있음");
 
-        int ret = t2.Result; 
+//        int ret = t2.Result;  // 이렇게 하면 주스레드가 Block 됩니다.
+                                // UI Update 안됨
 
-        Console.WriteLine($"결과 {ret}");
+        var awaiter= t2.GetAwaiter();
+
+        awaiter.OnCompleted(() => 
+            { 
+                Console.WriteLine($"결과 {awaiter.GetResult()}"); 
+            });
     }
 
     public static void Main()
