@@ -7,24 +7,15 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Ex1Menu1.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Ex2Dialog.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="MyDialog.xaml.cs">
+    <Compile Update="Thread1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Ex1Menu1.xaml">
+    <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Ex2Dialog.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="MyDialog.xaml">
+    <Page Update="Thread1.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
