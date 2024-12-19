@@ -1,17 +1,8 @@
-    <StackPanel>
-        <Label x:Name="label" Background="Yellow" Width="100"/>
-        <ProgressBar x:Name="prg" Minimum="0" Maximum="100" Value="10"/>
-        <Button x:Name="button" Content="button" Click="button_Click"/>
-    </StackPanel>
-
-
-    public static int Sum(int first, int last)
-    {
-        int s = 0;
-        for (int i = first; i <= last; i++)
+        using (FileStream fs = new FileStream("a.txt", FileMode.Create))
         {
-            s += i;
-            Thread.Sleep(10);
+            byte[] buff = new byte[1024 * 1024 * 2000]; // 1G
+
+            fs.Write(buff); //  동기적으로 쓰기
+
+            Console.WriteLine("WriteSync Finish");
         }
-        return s;
-    }
