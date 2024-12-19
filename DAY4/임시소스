@@ -1,19 +1,17 @@
     <StackPanel>
-        <Menu>
-            <MenuItem Header="File">
-                <MenuItem Header="새파일"/>
-                <Separator/>
-                <MenuItem Header="종료"/>
-            </MenuItem>
-
-            <MenuItem Header="도움말">
-                <MenuItem Header="정보">
-                    <MenuItem.Icon>
-                        <Image Source="images/melon.png"/>
-                    </MenuItem.Icon>
-                </MenuItem>
-
-            </MenuItem>            
-        </Menu>
-
+        <Label x:Name="label" Background="Yellow" Width="100"/>
+        <ProgressBar x:Name="prg" Minimum="0" Maximum="100" Value="10"/>
+        <Button x:Name="button" Content="button" Click="button_Click"/>
     </StackPanel>
+
+
+    public static int Sum(int first, int last)
+    {
+        int s = 0;
+        for (int i = first; i <= last; i++)
+        {
+            s += i;
+            Thread.Sleep(10);
+        }
+        return s;
+    }
