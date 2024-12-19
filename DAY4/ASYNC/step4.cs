@@ -20,10 +20,12 @@
     public static async void ButtonClick()
     {
 
+        Console.WriteLine($"start  {Thread.CurrentThread.ManagedThreadId}");
+
         int ret = await SumAsync(1, 500);
 
 
-        Console.WriteLine($"결과 {ret}");
+        Console.WriteLine($"finish {ret} {Thread.CurrentThread.ManagedThreadId}");
     }
 
     public static void Main()
