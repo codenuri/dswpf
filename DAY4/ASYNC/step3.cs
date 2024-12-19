@@ -26,10 +26,11 @@
 //        int ret = t2.Result;  // 이렇게 하면 주스레드가 Block 됩니다.
                                 // UI Update 안됨
 
-        var awaiter= t2.GetAwaiter();
+        var awaiter = t2.GetAwaiter();
 
         awaiter.OnCompleted(() => 
             { 
+                // 이 부분은 주스레드가 아닌 새로운 스레드로 실행. 
                 Console.WriteLine($"결과 {awaiter.GetResult()}"); 
             });
     }
@@ -37,6 +38,8 @@
     public static void Main()
     {
         ButtonClick();
+
+        Console.ReadLine();
     }
 }
 

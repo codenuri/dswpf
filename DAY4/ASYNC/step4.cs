@@ -10,7 +10,7 @@
             {
                 s += i;
                 Thread.Sleep(10);
-                Console.WriteLine($"Sum {i}");
+           //     Console.WriteLine($"Sum {i}");
             }
             return s;
         });
